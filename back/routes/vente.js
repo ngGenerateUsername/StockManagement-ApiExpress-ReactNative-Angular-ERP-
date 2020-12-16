@@ -15,13 +15,19 @@ venteRoute.get('/all', function(req,res){
                     if (err) { return res.status(500).json(err); } 
                     //el count chne7seb biha 9ddé famma men ventes fel liste bech mba3d nda5louha fel pramétre w n3awdou recherche jdid w fel les param ta3 recherche el limit ye5edh 9addé 3anna men vente bech to5rjelna 5edma ziw ziw 
                       var count  = products.length;
+
+                      if(count == 0 )
+                      {
+                        return res.status(201).json({message:'Pas de vente pour le moment'});
+                      }
                         var paramsGet = {
                                 domain:[],
-                                // fields:['id','name','user_id'],
+                                fields:['name','date_order','partner_id','amount_total','state'],
                                 order: 'name',
                                 limit:count,
                                 offset: 0,  
                               }; 
+                              console.log(count);
                   odoo.search_read('sale.order',paramsGet,function(err,vents){
                     if(err)
                       return res.status(500).json(err);
