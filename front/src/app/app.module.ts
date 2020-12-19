@@ -11,6 +11,8 @@ import { LoginService } from "./services/login.service";
 import { HttpClientModule } from '@angular/common/http';
 import {ToastModule} from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {TableModule} from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     HttpClientModule,
     ToastModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TableModule,
+    ButtonModule
   ],
   providers: [AuthService,LoginService],
   bootstrap: [AppComponent]
