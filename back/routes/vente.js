@@ -39,6 +39,18 @@ venteRoute.get('/all', function(req,res){
   
   
    });
+//// delete
+   venteRoute.delete('/btb', function(req,res){
+    odoo.connect(function (err) {
+      if (err) { return console.log(err); }
+      console.log('connected ! ');
+    });
+    const id = 4;
+    odoo.delete('sale.order', id, function (err, products) {
+      if (err) { return console.log(err); }
+      res.json(products);
+    });
+   });
   
 
    module.exports = venteRoute;
