@@ -1,10 +1,10 @@
 var express = require('express');
 var venteRoute = express.Router();
 var odoo = require('./../OdooConnect');
-    
+var middleware = require('./auth/middleware');   
 
 
-venteRoute.get('/all', function(req,res){
+venteRoute.get('/all',middleware, function(req,res){
     odoo.connect(function(err){
         if(err) {return console.log(err);}
          console.log('connected ! ');

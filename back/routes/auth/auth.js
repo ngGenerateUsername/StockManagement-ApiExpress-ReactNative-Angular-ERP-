@@ -20,7 +20,7 @@ authRouters.post('/login',function(req,res){
        }
             res.json(data);
      }
-     else res.status(401).json({error:'not authorized'});
+     else res.status(406).json({error:'not authorized'});  //Not acceptable response
        
      
 
