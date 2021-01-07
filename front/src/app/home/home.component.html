@@ -7,20 +7,10 @@
       <ul class="navbar-nav">
           
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown link
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-          </div>
-        </li>
+          <a class="nav-link" [routerLink]="['/iset']">Home</a>
+    
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" [routerLink]="['/home']">Sales list</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" (click)="logout()">Logout</a>
@@ -31,9 +21,9 @@
   </nav>
 <div class="container">
 
-
+<h1 class="mt-5">Sales List</h1>
 <div class="card mt-5">
- 
+  
     <p-table [value]="products" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
         <ng-template pTemplate="header">

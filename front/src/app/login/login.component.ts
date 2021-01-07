@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
       this.loginService.login(this.myform.value).subscribe
       ((data)=>{
           this.authService.storeStorage(data._id,data.email,data.token);
-          this.router.navigate(['/home']);
+          this.router.navigate(['/iset']);
       },(error)=>{
         this.onErrorLogin();
       })

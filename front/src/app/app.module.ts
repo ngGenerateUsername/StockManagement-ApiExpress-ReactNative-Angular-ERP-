@@ -13,13 +13,15 @@ import {ToastModule} from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TableModule} from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
+import { IsetComponent } from './iset/iset.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    IsetComponent
   ],
   imports: [
     BrowserModule,

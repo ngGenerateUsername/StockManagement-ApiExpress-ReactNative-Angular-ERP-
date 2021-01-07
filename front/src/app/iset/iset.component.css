@@ -1,0 +1,25 @@
+
+
+.cont{
+  background-color: #343a40;
+  width:auto;
+  border: 6px solid #4c4c87;
+  padding: 50px;
+  margin: 50px;
+}
+.title{
+    color:white;
+    text-align: center;
+    text-shadow: 2px 2px 5px white;
+    font-size:50px;
+}
+.text{
+    margin-top:70px;
+    font-size:20px;
+    text-indent: 50px;
+    color:white;
+     font-family: "Lucida Console", "Courier New", monospace;
+}
+.body{
+    background-color:#C1BBBA;
+}
