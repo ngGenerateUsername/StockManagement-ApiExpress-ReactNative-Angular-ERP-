@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     this.venteservice.getallvente().subscribe(
       result => {
         this.products = result;
-        console.log(this.products);
+        console.log(result);
       }, error=>{
         console.log(error);
       }

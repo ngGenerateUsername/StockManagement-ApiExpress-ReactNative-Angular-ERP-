@@ -6,7 +6,7 @@ import { Auth } from "../models/auth";
 })
 export class LoginService {
 
-  private url="http://localhost:3000/auth/login";
+  private url="http://localhost:3001/auth/login";
   constructor(private http:HttpClient) { }
 
   login(param)

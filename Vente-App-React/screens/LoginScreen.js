@@ -31,12 +31,12 @@ const LoginScreen=({navigation}) => {
     const   LoginApi= ()=>
     {
         
-        axios.post('http://192.168.1.105:3000/auth/login',{email:data.email,password:data.password}).
+        axios.post('http://192.168.1.2:3001/auth/login',{email:data.email,password:data.password}).
         then((response)=>{
            SecureStore.setItemAsync('token',response.data.token);
            setData([]);
            navigation.navigate("HomeScreen");
-        }).catch((error)=>{setModalVisible(true); console.log(response.error)});
+        }).catch((error)=>{setModalVisible(true);});
     }
 
 

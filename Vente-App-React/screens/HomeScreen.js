@@ -19,7 +19,7 @@ const HomeScreen = ({navigation})=>
         const token = await SecureStore.getItemAsync('token');
         if(token)
                 {
-                axios.get('http://192.168.1.105:3000/ventes/all',{headers:{
+                axios.get('http://192.168.1.2:3001/ventes/all',{headers:{
                     'authorization': `Bearer ${token}`,
                 }}).then((response)=>{
                                 setSales(response.data);
